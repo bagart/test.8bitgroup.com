@@ -3,7 +3,6 @@ namespace Bagart\LaravelApiProvider\Providers;
 
 use Bagart\LaravelApiProvider\ApiClientContract;
 use Bagart\LaravelApiProvider\DataContainerContract;
-use Bagart\LaravelApiProvider\DataContainers\Location;
 use Bagart\LaravelApiProvider\Exceptions;
 use Bagart\LaravelApiProvider\DataProviderContract;
 use Illuminate\Support\Collection;
