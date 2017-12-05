@@ -14,11 +14,16 @@ class DataContainerTypes
     ];
 
 
-    public function addType(string $type, string $class)
+    public function addType(string $type, string $class): void
     {
         $this->data_containers_by_type[$type] = $class;
     }
 
+    /**
+     * @param string $type
+     * @return string
+     * @throws LaravelApiProviderException
+     */
     public function getDataContainerNameByType(string $type): string
     {
         if (empty($this->data_containers_by_type[$type])) {
@@ -28,6 +33,11 @@ class DataContainerTypes
         return $this->data_containers_by_type[$type];
     }
 
+    /**
+     * @param string $type
+     * @return DataContainerContract
+     * @throws LaravelApiProviderException
+     */
     public function getInstanceByType(string $type): DataContainerContract
     {
         $class_name = $this->getDataContainerNameByType($type);

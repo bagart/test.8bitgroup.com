@@ -20,7 +20,7 @@ class Location implements DataContainerContract
         ];
     }
 
-    public function fill(array $attr)
+    public function fill(array $attr): void
     {
         if (isset($attr['name'])) {
             $this->name = $attr['name'];

@@ -8,9 +8,9 @@ interface ApiClientContract
     public function __construct(ClientInterface $client);
 
     /**
-     * @param $url
-     * @return *
-     * @throws \Bagart\LaravelApiProvider\Exceptions\LaravelApiProviderException
-    */
-    public function request($url);
+     * @param string $url
+     * @return array|null
+     * @throws Exceptions\LaravelApiProviderException
+     */
+    public function request(string $url);
 }

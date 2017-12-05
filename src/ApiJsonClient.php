@@ -22,9 +22,9 @@ class ApiJsonClient implements ApiClientContract
     /**
      * @param $url
      * @return ResponseInterface|Response
-     * @throws Exceptions\RequestException
+     * @throws Exceptions\LaravelApiProviderException
      */
-    protected function getResponseByUrl($url): ResponseInterface
+    protected function getResponseByUrl(string $url): ResponseInterface
     {
         try {
             return $this->client->request('GET', $url);
@@ -33,6 +33,10 @@ class ApiJsonClient implements ApiClientContract
         }
     }
 
+    /**
+     * @param ResponseInterface $response
+     * @throws Exceptions\LaravelApiProviderException
+     */
     protected function checkResponse(ResponseInterface $response): void
     {
         if ($response->getStatusCode() !== 200) {
@@ -42,6 +46,11 @@ class ApiJsonClient implements ApiClientContract
         assert(preg_match('~application/json\b~iu', $response->getHeaderLine('content-type')));
     }
 
+    /**
+     * @param ResponseInterface $response
+     * @return array|null
+     * @throws Exceptions\LaravelApiProviderException
+     */
     protected function getData(ResponseInterface $response)
     {
         try {
@@ -60,7 +69,12 @@ class ApiJsonClient implements ApiClientContract
         return $result['data'] ?? null;
     }
 
-    public function request($url)
+    /**
+     * @param string $url
+     * @return array|null
+     * @throws Exceptions\LaravelApiProviderException
+     */
+    public function request(string $url)
     {
         $response = $this->getResponseByUrl($url);
         $this->checkResponse($response);

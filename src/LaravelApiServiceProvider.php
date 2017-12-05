@@ -1,8 +1,6 @@
 <?php
 namespace Bagart\LaravelApiProvider;
 
-use Bagart\LaravelApiProvider\DataContainers\Location;
-use Bagart\LaravelApiProvider\Exceptions\LaravelApiProviderException;
 use Bagart\LaravelApiProvider\Providers\DataProvider;
 use GuzzleHttp\Client;
 use Illuminate\Support\ServiceProvider;

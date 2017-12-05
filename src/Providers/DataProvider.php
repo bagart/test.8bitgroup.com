@@ -21,10 +21,10 @@ class DataProvider implements DataProviderContract
 
     /**
      * @todo request empty logic and API empty format
-     * @param $data
-     * @throws Exceptions\ResponseException
+     * @param array|null $data
+     * @throws Exceptions\LaravelApiProviderException
      */
-    public function checkApiData($data, $data_type): void
+    protected function checkApiData($data, string $data_type): void
     {
         if (!$data || !is_array($data) || !is_array(current($data))) {
             throw new Exceptions\ResponseException('API response: no data');
@@ -36,7 +36,7 @@ class DataProvider implements DataProviderContract
 
     /**
      * @param string $url
-     * @param string $data_container_class
+     * @param string $data_type
      * @return Collection|DataContainerContract[]
      * @throws Exceptions\LaravelApiProviderException
      */
@@ -46,10 +46,16 @@ class DataProvider implements DataProviderContract
 
         $this->checkApiData($data, $data_type);
 
-        return $this->getDataContainersCollectionFromExternalFormat($data, $data_type);
+        return $this->getCollectionFromExternalFormat($data, $data_type);
     }
 
-    protected function getDataContainersCollectionFromExternalFormat(array $data, string $data_type): Collection
+    /**
+     * @param array $data
+     * @param string $data_type
+     * @return Collection|DataContainerContract[]
+     * @throws Exceptions\LaravelApiProviderException
+     */
+    protected function getCollectionFromExternalFormat(array $data, string $data_type): Collection
     {
         /**
          * @var DataContainerTypes $data_container_types

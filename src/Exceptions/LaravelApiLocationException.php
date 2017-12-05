@@ -1,7 +1,9 @@
 <?php
 namespace Bagart\LaravelApiProvider\Exceptions;
 
-class LaravelApiProviderException extends \Exception
+use Exception;
+
+class LaravelApiProviderException extends Exception
 {
 
 }
