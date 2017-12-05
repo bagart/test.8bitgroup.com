@@ -40,7 +40,7 @@ JSON error response format
 
 ## INSTALL
 ```bash
-composer required bagart/laravel-api-location
+composer require bagart/laravel-api-provider '@dev'
 ```
 
 register ServiceProvider:
