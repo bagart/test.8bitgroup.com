@@ -51,7 +51,7 @@ Add to `config/app.php` in section `providers`:
 
 ## features
 used:
- - Guzzle (curl inside as options)
+ - `Guzzle` (curl inside as options)
 
 ## todo
  - request empty logic and API empty format
@@ -59,5 +59,9 @@ used:
 ## tech details
 
 ### Contracts
-- Bagart\LaravelApiLocation\ApiJsonContract
-- Bagart\LaravelApiLocation\ApiJsonContract
+- `Bagart\LaravelApiLocation\ApiClientContract`
+- `Bagart\LaravelApiLocation\DataProviderContract`
+- `Bagart\LaravelApiLocation\DataContainerContract`
+
+## Exceptions
+All of expected Exception is instance of `Bagart\LaravelApiLocation\Exceptions\LaravelApiLocationException` 

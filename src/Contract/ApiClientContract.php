@@ -3,7 +3,7 @@ namespace Bagart\LaravelApiLocation;
 
 use GuzzleHttp\ClientInterface;
 
-interface ApiJsonContract
+interface ApiClientContract
 {
     public function __construct(ClientInterface $client);
 

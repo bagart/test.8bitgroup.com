@@ -6,7 +6,7 @@ use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\GuzzleException;
 use Psr\Http\Message\ResponseInterface;
 
-class ApiJsonClient implements ApiJsonContract
+class ApiJsonClient implements ApiClientContract
 {
     /**
      * @var ClientInterface

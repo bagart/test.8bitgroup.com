@@ -34,9 +34,5 @@ class LaravelApiLocationProvider extends ServiceProvider
                 app(ApiJsonClient::class)
             );
         });
-
-        dd(app(DataProvider::class));
-
-
     }
 }

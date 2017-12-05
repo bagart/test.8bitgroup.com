@@ -6,7 +6,7 @@ use Illuminate\Support\Collection;
 
 interface DataProviderContract
 {
-    public function __construct(ApiJsonContract $client_api);
+    public function __construct(ApiClientContract $client_api);
 
     /**
      * @param string $url

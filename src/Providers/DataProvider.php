@@ -1,7 +1,7 @@
 <?php
 namespace Bagart\LaravelApiLocation\Providers;
 
-use Bagart\LaravelApiLocation\ApiJsonContract;
+use Bagart\LaravelApiLocation\ApiClientContract;
 use Bagart\LaravelApiLocation\DataContainerContract;
 use Bagart\LaravelApiLocation\DataContainers\Location;
 use Bagart\LaravelApiLocation\Exceptions;
@@ -12,7 +12,7 @@ class DataProvider implements DataProviderContract
 {
     private $client_api;
 
-    public function __construct(ApiJsonContract $client_api)
+    public function __construct(ApiClientContract $client_api)
     {
         $this->client_api = $client_api;
     }
