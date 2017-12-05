@@ -4,6 +4,7 @@ namespace Bagart\LaravelApiProvider;
 use Bagart\LaravelApiProvider\Exceptions;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\GuzzleException;
+use GuzzleHttp\Psr7\Response;
 use Psr\Http\Message\ResponseInterface;
 
 class ApiJsonClient implements ApiClientContract
@@ -18,6 +19,11 @@ class ApiJsonClient implements ApiClientContract
         $this->client = $client;
     }
 
+    /**
+     * @param $url
+     * @return ResponseInterface|Response
+     * @throws Exceptions\RequestException
+     */
     protected function getResponseByUrl($url): ResponseInterface
     {
         try {
@@ -39,7 +45,7 @@ class ApiJsonClient implements ApiClientContract
     protected function getData(ResponseInterface $response)
     {
         try {
-            $result = \GuzzleHttp\json_decode($response->getBody());
+            $result = \GuzzleHttp\json_decode($response->getBody(), true);
         } catch (\InvalidArgumentException $e) {
             throw new Exceptions\ResponseException('response: JSON parse error');
         }
@@ -57,8 +63,8 @@ class ApiJsonClient implements ApiClientContract
     public function request($url)
     {
         $response = $this->getResponseByUrl($url);
-        $response->checkResponse($response);
+        $this->checkResponse($response);
 
-        return $response->getData($response);
+        return $this->getData($response);
     }
 }
