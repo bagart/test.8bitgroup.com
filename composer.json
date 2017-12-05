@@ -1,0 +1,29 @@
+{
+    "name": "bagart/laravel-api-location",
+    "description": "Test work: Laravel response for location API",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "BAGArt",
+            "email": "bagart@list.ru"
+        }
+    ],
+    "version": "1.0.0",
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.1.0",
+        "guzzlehttp/guzzle": "^6.2@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bagart\\LaravelApiLocation\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Bagart\\LaravelApiLocation\\Providers\\LaravelApiLocationProvider"
+            ]
+        }
+    }
+}
