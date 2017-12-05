@@ -29,8 +29,7 @@ class DataProvider implements DataProviderContract
         if (!$data || !is_array($data) || !is_array(current($data))) {
             throw new Exceptions\ResponseException('API response: no data');
         }
-
-        if (!isset($data['data_type'])) {
+        if (!isset($data[$data_type])) {
             throw new Exceptions\ResponseException("no data '{$data_type}' type in response");
         }
     }
@@ -57,7 +56,7 @@ class DataProvider implements DataProviderContract
          */
         $collection = new Collection();
 
-        foreach ($data['data_type'] as $dcArr) {
+        foreach ($data[$data_type] as $dcArr) {
             $data_container = $this->data_container_types->getInstanceByType($data_type);
             $data_container->fill($dcArr);
             $collection->push($data_container);

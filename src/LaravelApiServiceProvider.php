@@ -2,6 +2,7 @@
 namespace Bagart\LaravelApiProvider;
 
 use Bagart\LaravelApiProvider\DataContainers\Location;
+use Bagart\LaravelApiProvider\Exceptions\LaravelApiProviderException;
 use Bagart\LaravelApiProvider\Providers\DataProvider;
 use GuzzleHttp\Client;
 use Illuminate\Support\ServiceProvider;
@@ -41,11 +42,5 @@ class LaravelApiServiceProvider extends ServiceProvider
                 app(DataContainerTypes::class)
             );
         });
-
-        /**
-         * @var DataProvider $data_provider
-         */
-        $data_provider = app(DataProvider::class);
-        dd($data_provider->request('http://dockerhost/example.json', 'locations'));
     }
 }

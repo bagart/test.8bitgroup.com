@@ -43,6 +43,22 @@ JSON error response format
 composer require bagart/laravel-api-provider '@dev'
 ```
 
+## Usage
+```php
+    /**
+     * @var DataProvider $data_provider
+     */
+    $data_provider = app(DataProvider::class);
+
+    dump($data_provider->request('http://dockerhost/example.json', 'locations'));
+    dump($data_provider->request('http://dockerhost/example2.json', 'locations'));
+    try {
+        $data_provider->request('http://dockerhost/error.json', 'locations');
+    } catch (LaravelApiProviderException $e) {
+        dump("LaravelApiProviderException: {$e->getMessage()}");
+    }
+```
+        
 ## Features
 used:
  - `Guzzle` (curl inside as options)
