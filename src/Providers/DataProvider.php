@@ -22,13 +22,15 @@ class DataProvider implements DataProviderContract
     /**
      * @todo request empty logic and API empty format
      * @param array|null $data
+     * @param string $data_type
      * @throws Exceptions\LaravelApiProviderException
      */
     protected function checkApiData($data, string $data_type): void
     {
-        if (!$data || !is_array($data) || !is_array(current($data))) {
-            throw new Exceptions\ResponseException('API response: no data');
+        if (!$data || !is_array($data)) {
+            throw new Exceptions\ResponseException('API response: wrong data area');
         }
+
         if (!isset($data[$data_type])) {
             throw new Exceptions\ResponseException("no data '{$data_type}' type in response");
         }
