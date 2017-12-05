@@ -22,7 +22,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Bagart\\LaravelApiProvider\\LaravelApiProvider"
+                "Bagart\\LaravelApiProvider\\LaravelApiServiceProvider"
             ]
         }
     }

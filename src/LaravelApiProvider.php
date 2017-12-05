@@ -5,7 +5,7 @@ use Bagart\LaravelApiProvider\Providers\DataProvider;
 use GuzzleHttp\Client;
 use Illuminate\Support\ServiceProvider;
 
-class LaravelApiProvider extends ServiceProvider
+class LaravelApiServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.

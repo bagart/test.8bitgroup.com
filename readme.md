@@ -46,7 +46,7 @@ composer require bagart/laravel-api-provider '@dev'
 register ServiceProvider:
 Add to `config/app.php` in section `providers`:
 
-`Bagart\LaravelApiProvider\LaravelApiProviderProvider::class,`
+`Bagart\LaravelApiProvider\LaravelApiServiceProvider::class,`
 
 
 ## Features
