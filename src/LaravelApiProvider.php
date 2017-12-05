@@ -1,11 +1,11 @@
 <?php
-namespace Bagart\LaravelApiLocation;
+namespace Bagart\LaravelApiProvider;
 
-use Bagart\LaravelApiLocation\Providers\DataProvider;
+use Bagart\LaravelApiProvider\Providers\DataProvider;
 use GuzzleHttp\Client;
 use Illuminate\Support\ServiceProvider;
 
-class LaravelApiLocationProvider extends ServiceProvider
+class LaravelApiProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.

@@ -1,5 +1,5 @@
 <?php
-namespace Bagart\LaravelApiLocation;
+namespace Bagart\LaravelApiProvider;
 
 use GuzzleHttp\ClientInterface;
 
@@ -10,7 +10,7 @@ interface ApiClientContract
     /**
      * @param $url
      * @return *
-     * @throws \Bagart\LaravelApiLocation\Exceptions\LaravelApiLocationException
+     * @throws \Bagart\LaravelApiProvider\Exceptions\LaravelApiProviderException
     */
     public function request($url);
 }

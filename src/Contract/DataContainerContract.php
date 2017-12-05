@@ -1,5 +1,5 @@
 <?php
-namespace Bagart\LaravelApiLocation;
+namespace Bagart\LaravelApiProvider;
 
 interface DataContainerContract
 {

@@ -1,7 +1,7 @@
 <?php
-namespace Bagart\LaravelApiLocation\DataContainers;
+namespace Bagart\LaravelApiProvider\DataContainers;
 
-use Bagart\LaravelApiLocation\DataContainerContract;
+use Bagart\LaravelApiProvider\DataContainerContract;
 
 class Location implements DataContainerContract
 {

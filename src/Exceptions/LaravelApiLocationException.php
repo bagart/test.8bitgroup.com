@@ -1,7 +1,7 @@
 <?php
-namespace Bagart\LaravelApiLocation\Exceptions;
+namespace Bagart\LaravelApiProvider\Exceptions;
 
-class LaravelApiLocationException extends \Exception
+class LaravelApiProviderException extends \Exception
 {
 
 }

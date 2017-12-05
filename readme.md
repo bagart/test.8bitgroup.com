@@ -46,22 +46,22 @@ composer required bagart/laravel-api-location
 register ServiceProvider:
 Add to `config/app.php` in section `providers`:
 
-`Bagart\LaravelApiLocation\LaravelApiLocationProvider::class,`
+`Bagart\LaravelApiProvider\LaravelApiProviderProvider::class,`
 
 
-## features
+## Features
 used:
  - `Guzzle` (curl inside as options)
 
-## todo
+## Todo
  - request empty logic and API empty format
  
-## tech details
+## Tech details
 
 ### Contracts
-- `Bagart\LaravelApiLocation\ApiClientContract`
-- `Bagart\LaravelApiLocation\DataProviderContract`
-- `Bagart\LaravelApiLocation\DataContainerContract`
+- `Bagart\LaravelApiProvider\ApiClientContract`
+- `Bagart\LaravelApiProvider\DataProviderContract`
+- `Bagart\LaravelApiProvider\DataContainerContract`
 
 ## Exceptions
-All of expected Exception is instance of `Bagart\LaravelApiLocation\Exceptions\LaravelApiLocationException` 
+All of expected Exception is instance of `Bagart\LaravelApiProvider\Exceptions\LaravelApiProviderException` 

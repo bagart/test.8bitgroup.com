@@ -1,5 +1,5 @@
 {
-    "name": "bagart/laravel-api-location",
+    "name": "bagart/laravel-api-provider",
     "description": "Test work: Laravel response for location API",
     "license": "MIT",
     "authors": [
@@ -16,13 +16,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Bagart\\LaravelApiLocation\\": "src/"
+            "Bagart\\LaravelApiProvider\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Bagart\\LaravelApiLocation\\Providers\\LaravelApiLocationProvider"
+                "Bagart\\LaravelApiProvider\\Providers\\LaravelApiProvider"
             ]
         }
     }

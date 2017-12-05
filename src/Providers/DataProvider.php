@@ -1,11 +1,11 @@
 <?php
-namespace Bagart\LaravelApiLocation\Providers;
+namespace Bagart\LaravelApiProvider\Providers;
 
-use Bagart\LaravelApiLocation\ApiClientContract;
-use Bagart\LaravelApiLocation\DataContainerContract;
-use Bagart\LaravelApiLocation\DataContainers\Location;
-use Bagart\LaravelApiLocation\Exceptions;
-use Bagart\LaravelApiLocation\DataProviderContract;
+use Bagart\LaravelApiProvider\ApiClientContract;
+use Bagart\LaravelApiProvider\DataContainerContract;
+use Bagart\LaravelApiProvider\DataContainers\Location;
+use Bagart\LaravelApiProvider\Exceptions;
+use Bagart\LaravelApiProvider\DataProviderContract;
 use Illuminate\Support\Collection;
 
 class DataProvider implements DataProviderContract
@@ -36,7 +36,7 @@ class DataProvider implements DataProviderContract
      * @param string $url
      * @param string $data_container_class
      * @return Collection|DataContainerContract[]
-     * @throws Exceptions\LaravelApiLocationException
+     * @throws Exceptions\LaravelApiProviderException
      */
     public function request($url, $data_container_class): Collection
     {

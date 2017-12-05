@@ -1,7 +1,7 @@
 <?php
-namespace Bagart\LaravelApiLocation\Exceptions;
+namespace Bagart\LaravelApiProvider\Exceptions;
 
-class InvelidArgumentException extends LaravelApiLocationException
+class InvelidArgumentException extends LaravelApiProviderException
 {
 
 }

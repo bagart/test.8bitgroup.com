@@ -1,7 +1,7 @@
 <?php
-namespace Bagart\LaravelApiLocation;
+namespace Bagart\LaravelApiProvider;
 
-use Bagart\LaravelApiLocation\Exceptions;
+use Bagart\LaravelApiProvider\Exceptions;
 use Illuminate\Support\Collection;
 
 interface DataProviderContract
@@ -12,7 +12,7 @@ interface DataProviderContract
      * @param string $url
      * @param string $data_container_class
      * @return Collection|DataContainerContract[]
-     * @throws Exceptions\LaravelApiLocationException
+     * @throws Exceptions\LaravelApiProviderException
      */
     public function request($url, $data_container_class): Collection;
 }

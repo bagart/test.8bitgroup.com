@@ -1,7 +1,7 @@
 <?php
-namespace Bagart\LaravelApiLocation;
+namespace Bagart\LaravelApiProvider;
 
-use Bagart\LaravelApiLocation\Exceptions;
+use Bagart\LaravelApiProvider\Exceptions;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\GuzzleException;
 use Psr\Http\Message\ResponseInterface;
